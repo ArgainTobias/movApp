@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#root {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.75)), to(rgba(5, 7, 12, 0.75))), url("../../public/imagenes/fondoHome.jpg");
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../../public/imagenes/fondoHome.jpg");
+  background-size: cover;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  place-content: center;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.808);
+  color: darkgrey;
+  border-bottom: solid 2px black;
+}
+
+header .titulo-header {
+  color: darkgrey;
+  text-decoration: none;
+  width: 20%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+header .titulo-header h2 {
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+header .titulo-header:hover {
+  color: gray;
+}
+
+header nav {
+  display: -ms-grid;
+  display: grid;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+header nav a {
+  color: darkgrey;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: gray;
+}
+
+main .home-fondo {
+  padding: 1rem;
+  padding-top: 2rem;
+  min-height: 84vh;
+  background-size: cover;
+}
+
+main .home-fondo h1 {
+  color: darkgrey;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+main .home-fondo .explicacion {
+  margin: 1rem;
+  color: darkgrey;
+  min-height: 30vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+main .home-fondo .explicacion h2 {
+  margin-bottom: 2rem;
+}
+
+main .home-fondo .div-form {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  margin: 2rem;
+}
+
+main .home-fondo .div-form form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+main .home-fondo .div-form form input {
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+main .home-fondo .div-form form button {
+  padding: 0.3rem;
+}
+
+main .home-fondo .div-peliculas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+main .home-fondo .div-peliculas .informacion-pelicula {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-color: darkgreen;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 10px 10px;
+          box-shadow: 10px 10px 10px 10px;
+}
+
+main .home-fondo .div-peliculas .informacion-pelicula p {
+  margin-bottom: .5rem;
+}
+
+main .home-fondo .div-peliculas .informacion-pelicula .div-imagen {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  margin: .5rem;
+}
+
+main .home-fondo .div-peliculas .informacion-pelicula .div-imagen img {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+main .home-fondo .div-peliculas .informacion-pelicula .botones {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+}
+
+main .home-fondo .div-peliculas .informacion-pelicula .botones button {
+  margin: 0.3rem;
+  border: solid 1px black;
+  padding: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

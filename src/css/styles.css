@@ -3,37 +3,46 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Bitter', serif;
+}
+
+* h2 {
+  font-size: 1.2rem;
+}
+
+* p {
+  font-size: .9rem;
 }
 
 #root {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.75)), to(rgba(5, 7, 12, 0.75))), url("../../public/imagenes/fondoHome.jpg");
-  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../../public/imagenes/fondoHome.jpg");
+  background: #15171B;
   background-size: cover;
 }
 
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
   place-content: center;
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.808);
+  min-height: 100px;
+  background-color: black;
   color: darkgrey;
   border-bottom: solid 2px black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 header .titulo-header {
   color: darkgrey;
   text-decoration: none;
-  width: 20%;
   display: -ms-grid;
   display: grid;
   place-content: center;
 }
 
 header .titulo-header h2 {
-  margin-left: 1rem;
   text-transform: uppercase;
 }
 
@@ -41,17 +50,37 @@ header .titulo-header:hover {
   color: gray;
 }
 
+header .busqueda {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  color: darkgray;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header .busqueda i {
+  margin-right: .3rem;
+}
+
+header .busqueda:hover {
+  color: gray;
+}
+
 header nav {
   display: -ms-grid;
   display: grid;
+  padding-right: 1rem;
 }
 
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -62,11 +91,14 @@ header nav ul li {
   display: -ms-grid;
   display: grid;
   place-content: center;
+  margin-bottom: .5rem;
 }
 
 header nav a {
   color: darkgrey;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
 }
 
 header nav a:hover {
@@ -74,9 +106,10 @@ header nav a:hover {
 }
 
 main .home-fondo {
-  padding: 1rem;
   padding-top: 2rem;
-  min-height: 84vh;
+  min-height: 90vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.75)), to(rgba(5, 7, 12, 0.75))), url("../../public/imagenes/fondoHome.jpg");
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../../public/imagenes/fondoHome.jpg");
   background-size: cover;
 }
 
@@ -84,6 +117,7 @@ main .home-fondo h1 {
   color: darkgrey;
   text-align: center;
   text-transform: uppercase;
+  font-size: 1.3rem;
 }
 
 main .home-fondo .explicacion {
@@ -103,7 +137,7 @@ main .home-fondo .div-form {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  margin: 2rem;
+  margin: 2rem 0;
 }
 
 main .home-fondo .div-form form {
@@ -116,17 +150,25 @@ main .home-fondo .div-form form {
 main .home-fondo .div-form form input {
   padding: 0.3rem;
   margin-bottom: 0.5rem;
+  border-radius: 5px;
+  border: solid 1px black;
 }
 
 main .home-fondo .div-form form button {
+  margin: 0.3rem;
+  border: solid 1px black;
+  background-color: gray;
   padding: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 main .home-fondo .div-peliculas {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (0.5fr)[1];
+      grid-template-columns: repeat(1, 0.5fr);
+  place-content: center;
 }
 
 main .home-fondo .div-peliculas .informacion-pelicula {
@@ -134,11 +176,12 @@ main .home-fondo .div-peliculas .informacion-pelicula {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  background-color: darkgreen;
+  background-color: rgba(0, 0, 0, 0.808);
+  color: gray;
   padding: 1rem;
   border-radius: 5px;
-  -webkit-box-shadow: 10px 10px 10px 10px;
-          box-shadow: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0px 0px 10px 10px;
+          box-shadow: 0px 0px 10px 10px;
 }
 
 main .home-fondo .div-peliculas .informacion-pelicula p {
@@ -171,8 +214,180 @@ main .home-fondo .div-peliculas .informacion-pelicula .botones {
 main .home-fondo .div-peliculas .informacion-pelicula .botones button {
   margin: 0.3rem;
   border: solid 1px black;
+  background-color: gray;
   padding: 0.3rem;
   border-radius: 5px;
   cursor: pointer;
+}
+
+main .peliculas-fondo {
+  min-height: 100vh;
+}
+
+main .peliculas-fondo .contenedor-div-peliculas-menu {
+  margin: 3rem 2rem 2rem 4rem;
+}
+
+main .peliculas-fondo .contenedor-div-peliculas-menu h2 {
+  color: darkgray;
+}
+
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu {
+  text-align: center;
+  margin: 1rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  width: 300px;
+}
+
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .img img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: .6rem;
+}
+
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .txt h4 {
+  text-transform: uppercase;
+  color: darkgray;
+  margin-bottom: 0.6rem;
+}
+
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .txt button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: .5rem;
+  width: 150px;
+  margin: auto;
+  cursor: pointer;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  text-align: center;
+  color: darkgray;
+  background-color: black;
+  border-top: solid 2px black;
+}
+
+footer div {
+  margin: 1.5rem;
+}
+
+footer div h5 {
+  text-transform: uppercase;
+}
+
+footer .texto {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+footer .texto ul {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -ms-grid-columns: (0.2fr)[3];
+      grid-template-columns: repeat(3, 0.2fr);
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+footer .redes ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.2fr)[3];
+      grid-template-columns: repeat(3, 0.2fr);
+  place-content: center;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+footer .redes ul li i {
+  font-size: 1.2rem;
+  background-color: #303030;
+  padding: 8px;
+  border-radius: 100%;
+}
+
+footer .app ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.2fr)[2];
+      grid-template-columns: repeat(2, 0.2fr);
+  place-content: center;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+footer .app ul li i {
+  font-size: 1.2rem;
+  background-color: #303030;
+  padding: 8px;
+  border-radius: 100%;
+}
+
+@media (min-width: 992px) {
+  * h2 {
+    font-size: 1.6rem;
+  }
+  * p {
+    font-size: 1rem;
+  }
+  header nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: .6rem;
+  }
+  header nav a {
+    font-size: 1rem;
+  }
+  main .home-fondo h1 {
+    font-size: 1.8rem;
+  }
+  main .home-fondo .div-peliculas {
+    -ms-grid-columns: (0.4fr)[2];
+        grid-template-columns: repeat(2, 0.4fr);
+  }
+  main .home-fondo .div-peliculas .informacion-pelicula {
+    max-width: 500px;
+  }
+  footer {
+    -ms-grid-columns: 50% 25% 25%;
+        grid-template-columns: 50% 25% 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .home-fondo .div-form form input {
+    width: 300px;
+    padding: .6rem;
+    font-size: 1rem;
+  }
+  main .home-fondo .div-form form button {
+    font-size: 1rem;
+    padding: .4rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

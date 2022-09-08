@@ -10,12 +10,11 @@ const FavoritosContext = ({children}) => {
 
   const agregarFavoritos = () => {
 
-    
 
   }
 
   return (
-    <section className='home-fondo'></section>
+    <section className='peliculas-fondo'></section>
   )
 }
 

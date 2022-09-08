@@ -1,59 +1,68 @@
-import React, { useState } from "react";
-import Form from "./Form";
-import { MOVIE_KEY } from "../keys";
-import FormInfo from "./FormInfo";
+import React from 'react';
 
-const Peliculas = () => {
 
-  const [movie, setMovie] = useState({
-    titulo: "",
-    premios: "",
-    duracion: "",
-    genero: "",
-    pais: "",
-    imagen: "",
-  });
-
-  const getMovie = (e) => {
-    e.preventDefault();
-
-    const { pelicula } = e.target.elements;
-
-    const api_url = `https://www.omdbapi.com/?apikey=${MOVIE_KEY}&t=${pelicula.value}`;
-
-    fetch(api_url)
-      .then((res) => res.json())
-      .then((response) => {
-        const { Title, Awards, Runtime, Genre, Country, Poster } = response;
-
-        setMovie({
-          titulo: { Title },
-          premios: { Awards },
-          duracion: { Runtime },
-          genero: { Genre },
-          pais: { Country },
-          imagen: { Poster },
-        });
-
-        console.log(movie)
-
-      });
-  };
-
+const Peliculas = ({titleAccion, imageAccion, titleTerror,imageTerror, titleAventura, imageAventura}) => {
   return (
-    <section className="home-fondo">
-      <h1>Elija una película</h1>
-      <Form getMovie={getMovie} />
-      <FormInfo
-        titulo={movie.titulo.Title}
-        premios={movie.premios.Awards}
-        duracion={movie.duracion.Runtime}
-        genero={movie.genero.Genre}
-        pais={movie.pais.Country}
-        imagen={movie.imagen.Poster}
-      />
-    </section>
-  );
-};
+    <section className='peliculas-fondo'>
+      <div className='contenedor-div-peliculas-menu'>
+        <h2>Películas de Acción</h2>
+        <div className='div-peliculas-menu'>
+          {pelisAccion.map((peli) => {
+            return(
+              <div className='div-info-pelicula-menu'>
+                  <div className='img'>
+                    <img src={peli.Poster} alt={peli.Title} />
+                  </div>
+                  <div className='txt'>
+                    <h4>{peli.Title}</h4>
+                    <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                  </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
 
-export default Peliculas;
+      <div className='contenedor-div-peliculas-menu'>
+        <h2>Películas de Terror</h2>
+        <div className='div-peliculas-menu'>
+          {pelisTerror.map((peli) => {
+            return(
+              <div className='div-info-pelicula-menu'>
+                  <div className='img'>
+                    <img src={peli.Poster} alt={peli.Title} />
+                  </div>
+                  <div className='txt'>
+                    <h4>{peli.Title}</h4>
+                    <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                  </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      <div className='contenedor-div-peliculas-menu'>
+        <h2>Películas de Aventura</h2>
+        <div className='div-peliculas-menu'>
+          {pelisAventura.map((peli) => {
+            return(
+              <div className='div-info-pelicula-menu'>
+                  <div className='img'>
+                    <img src={peli.Poster} alt={peli.Title} />
+                  </div>
+                  <div className='txt'>
+                    <h4>{peli.Title}</h4>
+                    <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                  </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+    </section>
+  )
+}
+
+export default Peliculas

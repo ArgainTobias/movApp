@@ -10,16 +10,16 @@ const Header = () => {
       <nav>
         <ul>
           <NavLink to={"/peliculas"}>
-            <li>Elegir películas</li>
+            <li>Películas</li>
           </NavLink>
           <NavLink to={"/favoritos"}>
             <li>Favoritos</li>
           </NavLink>
-          <NavLink to={"/ver-mas-tarde"}>
-            <li>Ver más tarde</li>
-          </NavLink>
         </ul>
       </nav>
+      <NavLink to={"/busqueda"} className="busqueda">
+        <p><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Búsqueda</p>
+      </NavLink>
     </header>
   );
 };

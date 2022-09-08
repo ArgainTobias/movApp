@@ -19,7 +19,13 @@ const PeliculasContext = () => {
 
         
 
-        // !estaTitulo && 
+        if(!estaTitulo){
+            alert("La pelicula ya se encuentra seleccionada");
+
+            let pelicula = 
+
+            copiaMovies.push();
+        }
 
 
 

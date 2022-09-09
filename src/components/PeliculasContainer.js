@@ -1,7 +1,7 @@
-import React from 'react';
-import Peliculas from './Peliculas';
+import React, {useState} from 'react';
+import { useEffect } from 'react';
 import pelis from "../data.json"
-import { useState } from 'react';
+import Peliculas from './Peliculas';
 
 
 const PeliculasContainer = () => {
@@ -10,13 +10,19 @@ const PeliculasContainer = () => {
     const [peliTerr, setPeliTerror] = useState([]);
     const [peliAven, setPeliAventura] = useState([]);
 
+    useEffect(() => {
 
-    const pelisAccion = pelis.filter((peliAccion) => peliAccion.Genre.includes("Action"));
-    const pelisTerror = pelis.filter((peliAccion) => peliAccion.Genre.includes("Horror"));
-    const pelisAventura = pelis.filter((peliAccion) => peliAccion.Genre.includes("Adventure"));
+        const Accion = pelis.filter((peliAccion) => peliAccion.Genre.includes("Action"));
+        const Terror = pelis.filter((peliTerror) => peliTerror.Genre.includes("Horror"));
+        const Aventura = pelis.filter((peliAventura) => peliAventura.Genre.includes("Adventure"));
+        setPeliaccion(Accion);
+        setPeliTerror(Terror);
+        setPeliAventura(Aventura);
+
+    }, [])
 
     return (
-        <Peliculas pelisAccion={pelisAccion} pelisTerror={pelisTerror} pelisAventura={pelisAventura}/>
+        <Peliculas pelisAccion={peliAcc} pelisTerror={peliTerr} pelisAventura={peliAven}/>
     )
 }
 

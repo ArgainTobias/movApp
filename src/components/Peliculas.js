@@ -1,13 +1,18 @@
-import React from 'react';
+import React from "react";
+import peliculas from '../data.json'
 
+const Peliculas = () => {
 
-const Peliculas = ({titleAccion, imageAccion, titleTerror,imageTerror, titleAventura, imageAventura}) => {
+  const pelisAccion = peliculas.filter((peliAccion) => peliAccion.Genre.includes("Action"));
+  const pelisTerror = peliculas.filter((peliTerror) => peliTerror.Genre.includes("Horror"));
+  const pelisAventura = peliculas.filter((peliAventura) => peliAventura.Genre.includes("Adventure"));
+
   return (
-    <section className='peliculas-fondo'>
-      <div className='contenedor-div-peliculas-menu'>
+    <section className="peliculas-fondo">
+      <div className="contenedor-div-peliculas-menu">
         <h2>Películas de Acción</h2>
-        <div className='div-peliculas-menu'>
-          {pelisAccion.map((peli) => {
+        <div className="div-peliculas-menu">
+        {pelisAccion.map((peli) => {
             return(
               <div className='div-info-pelicula-menu'>
                   <div className='img'>
@@ -23,10 +28,10 @@ const Peliculas = ({titleAccion, imageAccion, titleTerror,imageTerror, titleAven
         </div>
       </div>
 
-      <div className='contenedor-div-peliculas-menu'>
+      <div className="contenedor-div-peliculas-menu">
         <h2>Películas de Terror</h2>
-        <div className='div-peliculas-menu'>
-          {pelisTerror.map((peli) => {
+        <div className="div-peliculas-menu">
+        {pelisTerror.map((peli) => {
             return(
               <div className='div-info-pelicula-menu'>
                   <div className='img'>
@@ -42,10 +47,10 @@ const Peliculas = ({titleAccion, imageAccion, titleTerror,imageTerror, titleAven
         </div>
       </div>
 
-      <div className='contenedor-div-peliculas-menu'>
+      <div className="contenedor-div-peliculas-menu">
         <h2>Películas de Aventura</h2>
-        <div className='div-peliculas-menu'>
-          {pelisAventura.map((peli) => {
+        <div className="div-peliculas-menu">
+        {pelisAventura.map((peli) => {
             return(
               <div className='div-info-pelicula-menu'>
                   <div className='img'>
@@ -60,9 +65,8 @@ const Peliculas = ({titleAccion, imageAccion, titleTerror,imageTerror, titleAven
           })}
         </div>
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Peliculas
+export default Peliculas;

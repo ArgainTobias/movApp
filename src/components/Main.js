@@ -2,7 +2,7 @@ import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import FavoritosContext from './FavoritosContext';
 import Home from './Home';
-import ElegirPeliculas from './ElegirPeliculas';
+import ElegirPelicula from './ElegirPelicula';
 import Peliculas from './Peliculas';
 
 const Main = () => {
@@ -12,7 +12,7 @@ const Main = () => {
             <Route path='/' element={<Home/>}></Route>
             <Route path='/peliculas' element={<Peliculas/>}></Route>
             <Route path='/favoritos' element={<FavoritosContext/>}></Route>
-            <Route path='/busqueda' element={<ElegirPeliculas/>}></Route>
+            <Route path='/busqueda' element={<ElegirPelicula/>}></Route>
         </Routes>
     </main>
   )

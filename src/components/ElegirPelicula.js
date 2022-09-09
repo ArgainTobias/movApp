@@ -3,7 +3,7 @@ import Form from "./Form";
 import { MOVIE_KEY } from "../keys";
 import FormInfo from "./FormInfo";
 
-const ElegirPeliculas = () => {
+const ElegirPelicula = () => {
 
   const [movie, setMovie] = useState({
     titulo: "",
@@ -34,9 +34,6 @@ const ElegirPeliculas = () => {
           pais: { Country },
           imagen: { Poster },
         });
-
-        console.log(movie)
-
       });
   };
 
@@ -56,4 +53,4 @@ const ElegirPeliculas = () => {
   );
 };
 
-export default ElegirPeliculas;
+export default ElegirPelicula;

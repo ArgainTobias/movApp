@@ -6,10 +6,10 @@ const Form = ({ getMovie }) => {
       <form onSubmit={getMovie}>
         <input
           type="text"
-          placeholder="Nombre de la pelicula"
+          placeholder="Nombre de la película..."
           name="pelicula"
         />
-        <button>Obtener película</button>
+        <button>Buscar película</button>
       </form>
     </div>
   );

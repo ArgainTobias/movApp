@@ -13,7 +13,7 @@ const Header = () => {
             <li>Películas</li>
           </NavLink>
           <NavLink to={"/favoritos"}>
-            <li>Favoritos</li>
+            <li>Favoritos (0)</li>
           </NavLink>
         </ul>
       </nav>

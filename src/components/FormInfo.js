@@ -21,7 +21,9 @@ const FormInfo = ({ titulo, premios, duracion, genero, pais, imagen }) => {
       </div>
     );
   } else {
-    return <></>;
+    return (
+      <></>
+    );
   }
 };
 

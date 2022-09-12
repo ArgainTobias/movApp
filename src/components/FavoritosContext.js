@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react'
+import swal from 'sweetalert';
 
 
 export const contexto = createContext();
@@ -8,8 +9,23 @@ const FavoritosContext = ({children}) => {
 
   const [peliculasFavoritas, setPeliculasFavoritas] = useState([]);
 
-  const agregarFavoritos = () => {
+  let copiaFavoritas = peliculasFavoritas.slice();
 
+  const estaEnFavoritos = (title) => peliculasFavoritas.some((peli)=> peli.title === title);
+
+  const agregarFavoritos = (title) => {
+
+    let estaTitulo = estaEnFavoritos(title);
+
+    if(!estaTitulo){
+
+      swal({
+        title:"Agregada a favoritos",
+        icon:"success",
+      });
+
+
+    }
 
   }
 

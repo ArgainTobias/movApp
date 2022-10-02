@@ -427,6 +427,193 @@
     "Type": "series",
     "totalSeasons": "1",
     "Response": "True"
+  },
+  {
+    "Title": "Thor",
+    "Year": "2011",
+    "Rated": "PG-13",
+    "Released": "06 May 2011",
+    "Runtime": "115 min",
+    "Genre": "Action, Adventure, Fantasy",
+    "Director": "Kenneth Branagh",
+    "Writer": "Ashley Miller, Zack Stentz, Don Payne",
+    "Actors": "Chris Hemsworth, Anthony Hopkins, Natalie Portman",
+    "Plot": "The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "5 wins & 30 nominations",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.0/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "77%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "57/100"
+      }
+    ],
+    "Metascore": "57",
+    "imdbRating": "7.0",
+    "imdbVotes": "838,112",
+    "imdbID": "tt0800369",
+    "Type": "movie",
+    "DVD": "13 Sep 2011",
+    "BoxOffice": "$181,030,624",
+    "Production": "N/A",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Uncharted",
+    "Year": "2022",
+    "Rated": "PG-13",
+    "Released": "18 Feb 2022",
+    "Runtime": "116 min",
+    "Genre": "Action, Adventure",
+    "Director": "Ruben Fleischer",
+    "Writer": "Rafe Judkins, Art Marcum, Matt Holloway",
+    "Actors": "Tom Holland, Mark Wahlberg, Antonio Banderas",
+    "Plot": "Street-smart Nathan Drake is recruited by seasoned treasure hunter Victor \"Sully\" Sullivan to recover a fortune amassed by Ferdinand Magellan, and lost 500 years ago by the House of Moncada.",
+    "Language": "English, Spanish",
+    "Country": "Spain, United States",
+    "Awards": "N/A",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMWEwNjhkYzYtNjgzYy00YTY2LThjYWYtYzViMGJkZTI4Y2MyXkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "6.3/10"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "45/100"
+      }
+    ],
+    "Metascore": "45",
+    "imdbRating": "6.3",
+    "imdbVotes": "183,692",
+    "imdbID": "tt1464335",
+    "Type": "movie",
+    "DVD": "N/A",
+    "BoxOffice": "$148,648,820",
+    "Production": "Columbia Pictures",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "10,000 BC",
+    "Year": "2008",
+    "Rated": "PG-13",
+    "Released": "07 Mar 2008",
+    "Runtime": "109 min",
+    "Genre": "Action, Adventure, Drama",
+    "Director": "Roland Emmerich",
+    "Writer": "Roland Emmerich, Harald Kloser",
+    "Actors": "Camilla Belle, Steven Strait, Marco Khan",
+    "Plot": "In the prehistoric past, D'Leh is a mammoth hunter who bonds with the beautiful Evolet. When warriors on horseback capture Evolet and the tribesmen, D'Leh must embark on an odyssey to save his true love.",
+    "Language": "English",
+    "Country": "United States, South Africa",
+    "Awards": "N/A",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMzc2NDMzNDY4Ml5BMl5BanBnXkFtZTYwNzM2Njk3._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "5.1/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "9%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "34/100"
+      }
+    ],
+    "Metascore": "34",
+    "imdbRating": "5.1",
+    "imdbVotes": "131,438",
+    "imdbID": "tt0443649",
+    "Type": "movie",
+    "DVD": "24 Jun 2008",
+    "BoxOffice": "$94,784,201",
+    "Production": "N/A",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Scream",
+    "Year": "1996",
+    "Rated": "R",
+    "Released": "20 Dec 1996",
+    "Runtime": "111 min",
+    "Genre": "Horror, Mystery",
+    "Director": "Wes Craven",
+    "Writer": "Kevin Williamson",
+    "Actors": "Neve Campbell, Courteney Cox, David Arquette",
+    "Plot": "A year after the murder of her mother, a teenage girl is terrorized by a new killer, who targets the girl and her friends by using horror films as part of a deadly game.",
+    "Language": "English",
+    "Country": "United States",
+    "Awards": "11 wins & 11 nominations",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMjA2NjU5MTg5OF5BMl5BanBnXkFtZTgwOTkyMzQxMDE@._V1_SX300.jpg",
+    "Ratings": [
+      {
+        "Source": "Internet Movie Database",
+        "Value": "7.4/10"
+      },
+      {
+        "Source": "Rotten Tomatoes",
+        "Value": "79%"
+      },
+      {
+        "Source": "Metacritic",
+        "Value": "65/100"
+      }
+    ],
+    "Metascore": "65",
+    "imdbRating": "7.4",
+    "imdbVotes": "337,042",
+    "imdbID": "tt0117571",
+    "Type": "movie",
+    "DVD": "08 Dec 1998",
+    "BoxOffice": "$103,046,663",
+    "Production": "N/A",
+    "Website": "N/A",
+    "Response": "True"
+  },
+  {
+    "Title": "Freddy",
+    "Year": "2017",
+    "Rated": "N/A",
+    "Released": "05 Nov 2017",
+    "Runtime": "1 min",
+    "Genre": "Short, Horror, Thriller",
+    "Director": "Marco Romano",
+    "Writer": "Marco Romano",
+    "Actors": "Mykola Yeriomin",
+    "Plot": "N/A",
+    "Language": "English",
+    "Country": "San Marino",
+    "Awards": "N/A",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMzg5YTQzODgtNGM4OC00YWFiLTkzZjUtNGIyMTA2MTM5YzA5XkEyXkFqcGdeQXVyNDcwNDE0Nzk@._V1_SX300.jpg",
+    "Ratings": [
+      
+    ],
+    "Metascore": "N/A",
+    "imdbRating": "N/A",
+    "imdbVotes": "26",
+    "imdbID": "tt7600064",
+    "Type": "movie",
+    "DVD": "N/A",
+    "BoxOffice": "N/A",
+    "Production": "N/A",
+    "Website": "N/A",
+    "Response": "True"
   }
+  
+  
 
 ]

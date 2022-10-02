@@ -22,8 +22,8 @@ const Footer = () => {
         <div className='app'>
             <h5>MovApp App</h5>
             <ul>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-google-play"></i></li>
+                <li><i class="fa-brands fa-apple"></i></li>
             </ul>
         </div>
     </footer>

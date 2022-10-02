@@ -1,5 +1,6 @@
 import React from "react";
-import peliculas from '../data.json'
+import peliculas from '../data.json';
+import ControlledCarousel from "./Carrusel";
 
 const Peliculas = () => {
 
@@ -9,6 +10,7 @@ const Peliculas = () => {
 
   return (
     <section className="peliculas-fondo">
+      <ControlledCarousel/>
       <div className="contenedor-div-peliculas-menu">
         <h2>Películas de Acción</h2>
         <div className="div-peliculas-menu">
@@ -17,10 +19,10 @@ const Peliculas = () => {
               <div className='div-info-pelicula-menu'>
                   <div className='img'>
                     <img src={peli.Poster} alt={peli.Title} />
-                  </div>
-                  <div className='txt'>
-                    <h4>{peli.Title}</h4>
-                    <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                    <div className='txt'>
+                      <h5>{peli.Title}</h5>
+                      <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                    </div>
                   </div>
               </div>
             )
@@ -36,10 +38,10 @@ const Peliculas = () => {
               <div className='div-info-pelicula-menu'>
                   <div className='img'>
                     <img src={peli.Poster} alt={peli.Title} />
-                  </div>
-                  <div className='txt'>
-                    <h4>{peli.Title}</h4>
-                    <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                    <div className='txt'>
+                      <h5>{peli.Title}</h5>
+                      <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                    </div>
                   </div>
               </div>
             )
@@ -55,10 +57,10 @@ const Peliculas = () => {
               <div className='div-info-pelicula-menu'>
                   <div className='img'>
                     <img src={peli.Poster} alt={peli.Title} />
-                  </div>
-                  <div className='txt'>
-                    <h4>{peli.Title}</h4>
-                    <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                    <div className='txt'>
+                      <h5>{peli.Title}</h5>
+                      <button><i class="fa-solid fa-play"></i> VER AHORA</button>
+                    </div>
                   </div>
               </div>
             )

@@ -1,29 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 
-const FormInfo = ({ titulo, premios, duracion, genero, pais, imagen }) => {
+const FormInfo = ({ titulo, año, tipo, id, imagen }) => {
+
+  console.log(año)
+  console.log(titulo)
+
   if (titulo) {
     return (
-      <div className="div-peliculas">
-        <div className="informacion-pelicula">
-          <h3>{titulo}</h3>
-          <div className="div-imagen">
-            <img src={imagen} alt={titulo} />
-          </div>
-          <p>Premios: {premios}</p>
-          <p>Duracion: {duracion}</p>
-          <p>Genero: {genero}</p>
-          <p>Pais: {pais}</p>
-          <div className="botones">
-            <button><i class="fa-solid fa-play"></i> VER AHORA</button>
-            <button>FAVORITOS</button>
-          </div>
+      <div className="informacion-pelicula">
+        <h3>{titulo}</h3>
+        <div className="div-imagen">
+          <img src={imagen} alt={titulo} />
+        </div>
+        <p>Año: {año}</p>
+        <p>{tipo}</p>
+        <div className="botones">
+          <button>
+            <i class="fa-solid fa-play"></i> VER AHORA
+          </button>
+          <button id={id}>FAVORITOS</button>
         </div>
       </div>
     );
   } else {
-    return (
-      <></>
-    );
+    return <></>;
   }
 };
 

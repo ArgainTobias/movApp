@@ -2,64 +2,74 @@ import React, { useState } from "react";
 import Form from "./Form";
 import { MOVIE_KEY } from "../keys";
 import FormInfo from "./FormInfo";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
 const ElegirPelicula = () => {
-
-  const [movie, setMovie] = useState({
-    titulo: "",
-    premios: "",
-    duracion: "",
-    genero: "",
-    pais: "",
-    imagen: "",
-  });
+  const [movies, setMovies] = useState([]);
+  let copiaMovies = movies.slice();
+  let idPelicula = 0;
 
   const getMovie = (e) => {
     e.preventDefault();
 
     const { pelicula } = e.target.elements;
 
-    if(pelicula.value.length > 0){
+    if (pelicula.value.length > 0) {
+      const api_url = `https://www.omdbapi.com/?apikey=${MOVIE_KEY}&s=${pelicula.value}`;
+      copiaMovies = [];
 
-      const api_url = `https://www.omdbapi.com/?apikey=${MOVIE_KEY}&t=${pelicula.value}`;
-  
       fetch(api_url)
         .then((res) => res.json())
         .then((response) => {
-          const { Title, Awards, Runtime, Genre, Country, Poster } = response;
-  
-          setMovie({
-            titulo: { Title },
-            premios: { Awards },
-            duracion: { Runtime },
-            genero: { Genre },
-            pais: { Country },
-            imagen: { Poster },
-          });
-        });
-    }
-    else{
-      swal({
-        title:"Debe ingresar una película",
-        icon:"error"
-      })
-    }
+          if (response.Search) {
+            response.Search.forEach((peli) => {
+              const { Title, Year, Type, Poster } = peli;
+              idPelicula += 1;
 
+              copiaMovies.push({
+                titulo: { Title },
+                año: { Year },
+                tipo: { Type },
+                imagen: { Poster },
+                id: idPelicula,
+              });
+            });
+            setMovies(copiaMovies);
+          }
+          else{
+            swal({
+                title:"No se han encontrado resultados para su búsqueda",
+                icon:"warning"
+            })
+          }
+          pelicula.value="";
+        });
+    } else {
+      swal({
+        title: "Debe ingresar una película",
+        icon: "error",
+      });
+    }
   };
 
   return (
     <section className="home-fondo">
       <h1>Elija una película</h1>
       <Form getMovie={getMovie} />
-      <FormInfo
-        titulo={movie.titulo.Title}
-        premios={movie.premios.Awards}
-        duracion={movie.duracion.Runtime}
-        genero={movie.genero.Genre}
-        pais={movie.pais.Country}
-        imagen={movie.imagen.Poster}
-      />
+      <div className="div-peliculas">
+        {movies.map((movie) => {
+          return (
+            <FormInfo
+              titulo={movie.titulo.Title}
+              año={movie.año.Year}
+              tipo={movie.tipo.Type}
+              imagen={movie.imagen.Poster}
+              id={movie.id}
+              key={movie.id}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 };

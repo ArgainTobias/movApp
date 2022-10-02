@@ -25,8 +25,8 @@ header {
   -ms-grid-columns: 33% 33% 33%;
       grid-template-columns: 33% 33% 33%;
   place-content: center;
-  min-height: 100px;
-  background-color: black;
+  min-height: 10vh;
+  background-color: rgba(0, 0, 0, 0.85);
   color: darkgrey;
   border-bottom: solid 2px black;
   position: -webkit-sticky;
@@ -36,7 +36,7 @@ header {
 }
 
 header .titulo-header {
-  color: darkgrey;
+  color: red;
   text-decoration: none;
   display: -ms-grid;
   display: grid;
@@ -48,7 +48,7 @@ header .titulo-header h2 {
 }
 
 header .titulo-header:hover {
-  color: gray;
+  color: darkred;
 }
 
 header .busqueda {
@@ -58,6 +58,7 @@ header .busqueda {
   color: darkgray;
   text-decoration: none;
   text-transform: uppercase;
+  padding-top: .6rem;
 }
 
 header .busqueda i {
@@ -71,20 +72,8 @@ header .busqueda:hover {
 header nav {
   display: -ms-grid;
   display: grid;
+  place-content: center;
   padding-right: 1rem;
-}
-
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header nav ul li {
@@ -92,7 +81,7 @@ header nav ul li {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  margin-bottom: .5rem;
+  padding-top: .6rem;
 }
 
 header nav a {
@@ -173,8 +162,8 @@ main .home-fondo .div-peliculas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .home-fondo .div-peliculas .informacion-pelicula {
@@ -186,8 +175,11 @@ main .home-fondo .div-peliculas .informacion-pelicula {
   color: gray;
   padding: 1rem;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 10px 10px;
-          box-shadow: 0px 0px 10px 10px;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.808);
+          box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.808);
+  margin: 1rem 0;
+  width: 350px;
+  min-height: 420px;
 }
 
 main .home-fondo .div-peliculas .informacion-pelicula h3 {
@@ -196,6 +188,7 @@ main .home-fondo .div-peliculas .informacion-pelicula h3 {
 
 main .home-fondo .div-peliculas .informacion-pelicula p {
   margin-bottom: .5rem;
+  text-transform: capitalize;
 }
 
 main .home-fondo .div-peliculas .informacion-pelicula .div-imagen {
@@ -207,9 +200,7 @@ main .home-fondo .div-peliculas .informacion-pelicula .div-imagen {
 
 main .home-fondo .div-peliculas .informacion-pelicula .div-imagen img {
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: solid 1px black;
+  width: 200px;
   border-radius: 5px;
 }
 
@@ -231,8 +222,25 @@ main .home-fondo .div-peliculas .informacion-pelicula .botones button {
   cursor: pointer;
 }
 
+main .home-fondo .div-peliculas .informacion-pelicula .botones button:hover {
+  background-color: darkred;
+}
+
 main .peliculas-fondo {
   min-height: 100vh;
+}
+
+main .peliculas-fondo .img-carrusel {
+  height: auto;
+  max-height: 90vh;
+  width: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
+  opacity: .5;
+}
+
+main .peliculas-fondo .slide-text {
+  color: darkgray;
 }
 
 main .peliculas-fondo .contenedor-div-peliculas-menu {
@@ -267,53 +275,71 @@ main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-in
   display: -ms-grid;
   display: grid;
   place-content: center;
-  width: 250px;
+  min-width: 300px;
   -webkit-transition: all 300ms;
   transition: all 300ms;
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
+  min-height: 300px;
+}
+
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .img {
+  margin-bottom: 0.6rem;
+  height: 100%;
+  position: relative;
 }
 
 main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .img img {
-  width: 250px;
-  height: 150px;
-  margin-bottom: .6rem;
+  width: 300px;
+  height: 300px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .txt {
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .img .txt {
   visibility: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   -webkit-transition: all 300ms;
   transition: all 300ms;
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
-  padding: 0 10px 10px 10px;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  height: 100%;
+  width: 100%;
 }
 
-main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .txt h4 {
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .img .txt h5 {
   text-transform: uppercase;
   color: darkgray;
   margin-bottom: 0.6rem;
 }
 
-main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .txt button {
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .img .txt button {
   background-color: red;
   color: white;
   border: none;
   padding: .5rem;
-  width: 150px;
+  width: 130px;
   margin: auto;
   cursor: pointer;
 }
 
+main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu .img .txt button:hover {
+  background-color: darkred;
+}
+
 main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu:hover {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-  -webkit-box-shadow: 0 0 5px 5px black;
-          box-shadow: 0 0 5px 5px black;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 0 10px 0px black;
+          box-shadow: 0 0 10px 0px black;
   border-radius: 10px;
   z-index: 2;
+  background-color: #15171B;
 }
 
 main .peliculas-fondo .contenedor-div-peliculas-menu .div-peliculas-menu .div-info-pelicula-menu:hover .img img {
@@ -403,15 +429,6 @@ footer .app ul li i {
   * p {
     font-size: 1rem;
   }
-  header nav ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    padding-top: .6rem;
-  }
   header nav a {
     font-size: 1rem;
   }
@@ -436,6 +453,7 @@ footer .app ul li i {
     width: 300px;
     padding: .6rem;
     font-size: 1rem;
+    outline: none;
   }
   main .home-fondo .div-form form button {
     font-size: 1rem;

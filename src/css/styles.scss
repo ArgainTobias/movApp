@@ -20,15 +20,15 @@ header{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     place-content: center;
-    min-height: 100px;
-    background-color: rgb(0, 0, 0);
+    min-height: 10vh;
+    background-color: rgba(0, 0, 0, .85);
     color: darkgrey;
     border-bottom: solid 2px black;
     position: sticky;
     top: 0;
     z-index: 10;
     .titulo-header{
-        color: darkgrey;
+        color: red;
         text-decoration: none;
         display: grid;
         place-content: center;
@@ -37,7 +37,7 @@ header{
         }
     }
     .titulo-header:hover{
-        color:gray;
+        color:darkred;
     }
     .busqueda{
         display: grid;
@@ -45,6 +45,8 @@ header{
         color: darkgray;
         text-decoration: none;
         text-transform: uppercase;
+        padding-top: .6rem;
+
         i{
             margin-right: .3rem;
         }
@@ -54,16 +56,15 @@ header{
     }
     nav{
         display: grid;
+        place-content: center;
         padding-right: 1rem;
         ul{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             li{
                 list-style: none;
                 display: grid;
                 place-content: center;
-                margin-bottom: .5rem;
+                padding-top: .6rem;
+                // margin-bottom: .5rem;
             }
         }
         a{
@@ -131,7 +132,7 @@ main{
             display: flex;
             justify-content: space-around;
             align-items: center;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             // margin-bottom: 3.5rem;
             // margin-top: 1.5rem;
             .informacion-pelicula{
@@ -142,12 +143,16 @@ main{
                 color: gray;
                 padding: 1rem;
                 border-radius: 5px;
-                box-shadow: 0px 0px 10px 10px;
+                box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.808);
+                margin: 1rem 0;
+                width: 350px;
+                min-height: 420px;
                 h3{
                     text-transform: uppercase;
                 }
                 p{
                     margin-bottom: .5rem;
+                    text-transform: capitalize;
                 }
                 .div-imagen{
                     display: grid;
@@ -155,8 +160,8 @@ main{
                     margin: .5rem;
                     img{
                         height: 200px;
-                        object-fit: cover;
-                        border: solid 1px black;
+                        width: 200px;
+                        // object-fit: cover;
                         border-radius: 5px;
                     }
                 }
@@ -172,6 +177,9 @@ main{
                         margin: auto;
                         cursor: pointer;
                     }
+                    button:hover{
+                        background-color: darkred;
+                    }
                 }
             }
         }
@@ -179,6 +187,16 @@ main{
 
     .peliculas-fondo{
         min-height: 100vh;
+        .img-carrusel{
+            height: auto;
+            max-height: 90vh;
+            width: auto;
+            object-fit: fill;
+            opacity: .5;
+        }
+        .slide-text{
+            color: darkgray;
+        }
         .contenedor-div-peliculas-menu{
             margin: 3rem 2rem 2rem 4rem;
             h2{
@@ -195,46 +213,59 @@ main{
                     text-align: center;
                     display: grid;
                     place-content: center;
-                    width: 250px;
+                    min-width: 300px;
                     transition: all 300ms;
                     transition-delay: .3s;
+                    min-height: 300px;
                     .img{
+                        margin-bottom: 0.6rem;
+                        height: 100%;
+                        position: relative;
                         img{
-                            width: 250px;
-                            height: 150px;
+                            width: 300px;
+                            height: 300px;
                             // object-fit: cover;
-                            margin-bottom: .6rem;
                             border-radius: 5px;
                             cursor: pointer;
                         }
-                    }
-                    .txt{
-                        visibility: hidden;
-                        transition: all 300ms;
-                        transition-delay: .3s;
-                        padding: 0 10px 10px 10px;
-
-                        h4{
-                            text-transform: uppercase;
-                            color: darkgray;
-                            margin-bottom: 0.6rem;
-                        }
-                        button{
-                            background-color: red;
-                            color: white;
-                            border: none;
-                            padding: .5rem;
-                            width: 150px;
-                            margin: auto;
-                            cursor: pointer;
+                        .txt{
+                            visibility: hidden;
+                            display: grid;
+                            place-content: center;
+                            transition: all 300ms;
+                            transition-delay: .3s;
+                            position: absolute;
+                            top: 0;
+                            background: rgba(0, 0, 0, .85);
+                            height: 100%;
+                            width: 100%;
+    
+                            h5{
+                                text-transform: uppercase;
+                                color: darkgray;
+                                margin-bottom: 0.6rem;
+                            }
+                            button{
+                                background-color: red;
+                                color: white;
+                                border: none;
+                                padding: .5rem;
+                                width: 130px;
+                                margin: auto;
+                                cursor: pointer;
+                            }
+                            button:hover{
+                                background-color: darkred;
+                            }
                         }
                     }
                 }
                 .div-info-pelicula-menu:hover{
-                    transform: scale(1.25);
-                    box-shadow: 0 0 5px 5px black;
+                    transform: scale(1.05);
+                    box-shadow: 0 0 10px 0px black;
                     border-radius: 10px;
                     z-index: 2;
+                    background-color: #15171B;
                     .img{
                         img{
                             border-bottom-left-radius: 0;
@@ -324,11 +355,6 @@ footer{
 
     header{
         nav{
-            ul{
-                flex-direction: row;
-                justify-content: space-around;
-                padding-top: .6rem;
-            }
             a{
                 font-size: 1rem;
             }
@@ -370,6 +396,7 @@ footer{
                         width: 300px;
                         padding: .6rem;
                         font-size: 1rem;
+                        outline: none;
                     }
                     button{
                         font-size: 1rem;

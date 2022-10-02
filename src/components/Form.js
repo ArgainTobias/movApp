@@ -6,7 +6,7 @@ const Form = ({ getMovie }) => {
       <form onSubmit={getMovie}>
         <input
           type="text"
-          placeholder="Nombre de la película..."
+          placeholder="Buscar..."
           name="pelicula"
         />
         <button>Buscar película</button>

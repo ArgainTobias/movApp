@@ -9,11 +9,8 @@ const Header = () => {
       </NavLink>
       <nav>
         <ul>
-          <NavLink to={"/peliculas"}>
+          <NavLink to={"/"}>
             <li>Películas</li>
-          </NavLink>
-          <NavLink to={"/favoritos"}>
-            <li>Favoritos (0)</li>
           </NavLink>
         </ul>
       </nav>

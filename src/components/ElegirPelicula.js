@@ -21,8 +21,12 @@ const ElegirPelicula = () => {
       fetch(api_url)
         .then((res) => res.json())
         .then((response) => {
-          if (response.Search) {
-            response.Search.forEach((peli) => {
+          const {Search} = response
+          if (Search) {
+            console.log(Search)
+            const peliculasConImagen = Search.filter((pelicula) => pelicula.Poster !== 'N/A');
+            console.log(peliculasConImagen);
+            peliculasConImagen.forEach((peli) => {
               const { Title, Year, Type, Poster } = peli;
               idPelicula += 1;
 

@@ -9,7 +9,6 @@ const Main = () => {
     <main>
         <Routes>
             <Route path='/' element={<Peliculas/>}></Route>
-            {/* <Route path='/peliculas' element={<Peliculas/>}></Route> */}
             <Route path='/busqueda' element={<ElegirPelicula/>}></Route>
         </Routes>
     </main>

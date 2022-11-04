@@ -1,10 +1,6 @@
 import React from "react";
 
 const FormInfo = ({ titulo, año, tipo, id, imagen }) => {
-
-  console.log(año)
-  console.log(titulo)
-
   if (titulo) {
     return (
       <div className="informacion-pelicula">

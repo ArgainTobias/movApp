@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useEffect } from 'react';
-import pelis from "../data.json"
+import pelis from "../../data.json"
 import Peliculas from './Peliculas';
 
 

@@ -1,14 +1,15 @@
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
+import { FavoritosContext } from "./components/FavoritosContext/FavoritosContext";
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Main/>
-      <Footer/>
-    </>
+    <FavoritosContext>
+      <Header />
+      <Main />
+      <Footer />
+    </FavoritosContext>
   );
 }
 

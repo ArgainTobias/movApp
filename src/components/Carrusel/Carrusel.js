@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import pelis from '../data.json';
+import pelis from '../../data.json';
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);

@@ -1,6 +1,6 @@
 import React from "react";
-import peliculas from '../data.json';
-import ControlledCarousel from "./Carrusel";
+import peliculas from '../../data.json';
+import ControlledCarousel from "../Carrusel/Carrusel";
 
 const Peliculas = () => {
 

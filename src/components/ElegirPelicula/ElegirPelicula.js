@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Form from "./Form";
-import { MOVIE_KEY } from "../keys";
-import FormInfo from "./FormInfo";
+import Form from "../Form/Form";
+import { MOVIE_KEY } from "../../keys";
+import FormInfo from "../FormInfo/FormInfo";
 import swal from "sweetalert";
 
 const ElegirPelicula = () => {
@@ -23,9 +23,7 @@ const ElegirPelicula = () => {
         .then((response) => {
           const {Search} = response
           if (Search) {
-            console.log(Search)
             const peliculasConImagen = Search.filter((pelicula) => pelicula.Poster !== 'N/A');
-            console.log(peliculasConImagen);
             peliculasConImagen.forEach((peli) => {
               const { Title, Year, Type, Poster } = peli;
               idPelicula += 1;
@@ -58,7 +56,7 @@ const ElegirPelicula = () => {
 
   return (
     <section className="home-fondo">
-      <h1>Elija una película</h1>
+      <h2>Elija una película</h2>
       <Form getMovie={getMovie} />
       <div className="div-peliculas">
         {movies.map((movie) => {

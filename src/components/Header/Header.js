@@ -9,13 +9,20 @@ const Header = () => {
       </NavLink>
       <nav>
         <ul>
+            <li>
           <NavLink to={"/"}>
-            <li>Películas</li>
+              Películas
           </NavLink>
+            </li>
+          <li>
+            <NavLink to={"/favoritos"}>Favoritos</NavLink>
+          </li>
         </ul>
       </nav>
       <NavLink to={"/busqueda"} className="busqueda">
-        <p><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Búsqueda</p>
+        <p>
+          <i class="fa-sharp fa-solid fa-magnifying-glass"></i> Búsqueda
+        </p>
       </NavLink>
     </header>
   );

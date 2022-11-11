@@ -9,7 +9,7 @@ const Favoritos = () => {
   useEffect(() => {
     const favoritosToUse = JSON.parse(localStorage.getItem('FAVORITOS')) || copiaFavoritos;
     setFavoritos(favoritosToUse)
-  }, [setFavoritos]);
+  }, [setFavoritos, copiaFavoritos]);
 
   return (
     <section className="home-fondo">

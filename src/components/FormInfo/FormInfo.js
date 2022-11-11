@@ -12,7 +12,7 @@ const FormInfo = ({ titulo, año, tipo, id, imagen }) => {
 
     setTitulosFavoritos(titulosFavoritosToUse);
 
-  }, [titulo, setTitulosFavoritos])
+  }, [titulo, setTitulosFavoritos, copiaTitulosFavoritos])
 
   const AddFavorites = () => {
     copiaTitulosFavoritos.push(titulo);
